@@ -71,6 +71,10 @@ class Stage3DRenderer
 
     private function uploadToContext3D (texture :FlashTexture)
     {
+        if (_context3D == null){
+            _textures.push(texture);
+            return;
+        }
         var bitmapData = texture.bitmapData;
 
         // Use a resized copy if necessary
@@ -106,13 +110,13 @@ class Stage3DRenderer
 
 #if !flambe_debug_renderer
         // BitmapRenderer is faster than carrying on with a software driver
-        if (_context3D.driverInfo.indexOf("Software") != -1) {
-            log.warn("Detected a slow Stage3D driver, refusing to go on");
-            var ref = _context3D;
-            onError();
-            ref.dispose();
-            return;
-        }
+//        if (_context3D.driverInfo.indexOf("Software") != -1) {
+//            log.warn("Detected a slow Stage3D driver, refusing to go on");
+//            var ref = _context3D;
+  //          onError();
+    //        ref.dispose();
+     //       return;
+      //  }
 #end
 
         // Re-upload any lost textures to the GPU
