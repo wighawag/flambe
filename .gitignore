@@ -3,3 +3,6 @@ chxdoc
 .lock-waf*
 bin/.waf*
 *.fdz
+compile_swf.hxml
+target/
+
