@@ -5,4 +5,5 @@ bin/.waf*
 *.fdz
 compile_swf.hxml
 target/
-
+.idea/
+*.iml
