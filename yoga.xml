@@ -3,7 +3,8 @@
 	<compiler-version>2.10</compiler-version>
 
 	<id>com.wighawag.wighawag-flambe</id>
-	<version>0.1.1-SNAPSHOT</version>
+	<version>0.1.1</version>
+	<prepared>2013-02-23 21:21:42</prepared>
 
 	<main>Main</main>
 
