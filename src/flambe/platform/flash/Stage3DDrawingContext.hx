@@ -312,7 +312,7 @@ class Stage3DDrawingContext
     public function willRender ()
     {
         // Context3D requires clear() be called before each frame
-        _context3D.clear(1.0, 1.0, 1.0);
+        _context3D.clear(0.0, 0.0, 0.0);
     }
 
     public function didRender ()
@@ -327,7 +327,7 @@ class Stage3DDrawingContext
     public function resize (width :Int, height :Int)
     {
         // TODO(bruno): Vary anti-alias quality depending on the environment
-        _context3D.configureBackBuffer(width, height, 2, false);
+        _context3D.configureBackBuffer(width, height, 0, false);
 
         // Create an orthographic projection matrix
         _projMatrix = new Matrix3D(Vector.ofArray([
